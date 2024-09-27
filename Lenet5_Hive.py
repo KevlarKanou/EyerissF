@@ -7,7 +7,7 @@ import skimage.io as io
 ef = EF()
 hive = Hive(ef)
 
-pics = [255-io.imread("Pic/01.png", as_grey=True)]
+pics = [255-io.imread("Pic/01.png", as_gray=True)]
 flts = [np.load("ConvLayerFilter/ConvLayer1Filter"+str(x)+".npy") for x in range(1,7)]
 
 pics=hive.Conv2d(pics,flts,1,6)
